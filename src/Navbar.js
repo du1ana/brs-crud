@@ -7,7 +7,7 @@ export default class Navbar extends Component {
  return (
    <div>
       <div className="btn-group font-weight-bold">
-        <button className="btn btn-outline-primary" onClick={() => this.props.handleNavigation("")}>Books</button>
+        <button className="btn btn-outline-primary" onClick={() => this.props.handleNavigation("book")}>Books</button>
         <button className="btn btn-outline-primary" onClick={() => this.props.handleNavigation("")}>Reviews</button>
          <button className="btn btn-outline-primary" onClick={() => this.props.handleNavigation("")}>Libraries</button>
          <button className="btn btn-outline-primary" onClick={() => this.props.handleNavigation("author")}>Authors</button>
