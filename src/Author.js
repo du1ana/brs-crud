@@ -13,7 +13,7 @@ const AuthorRecord = (props) => {
       <td>{props.Author.books}</td>
       <td>
         <button
-          className="btn btn-sm btn-danger"
+          className="btn btn-sm btn-success"
           onClick={() => {
             props.updateAuthor(props.Author.name);
           }}
@@ -124,7 +124,7 @@ export default class AuthorList extends Component {
 
   async deleteAuthor(author) {
     await axios
-      .delete("http://localhost:5000/author/delete/", {
+      .delete("http://localhost:5000/author/remove/", {
         data: { name: author }
       })
       .then((response) => {
@@ -222,7 +222,7 @@ export default class AuthorList extends Component {
             <tr>
 
               <th>Author Name</th>
-              <th>Genres Written</th>
+              <th>Genre Written</th>
               <th>Nationality</th>
               <th>Author Description</th>
               <th>Books Written</th>
