@@ -136,8 +136,9 @@ export default class UserList extends Component {
       <div className="AppHeader">
          <Navbar handleNavigation={this.props.handleNavigation} />
            <div className="AddUser">
+             <br/>
         <form>
-          <h4>Sign-Up New User</h4>
+          <h4>Sign-Up New Site Administrator</h4>
           <table className="table-secondary center">
             <tr>
                 <td><label>Username </label></td>
@@ -158,7 +159,7 @@ export default class UserList extends Component {
           <input type="password" value={signInPassword} onChange={this.onTextboxChangePassword}></input>
   </td>
   </tr>
-  <tr><td colSpan="2"><input type="button" className="btn btn-primary" value="Add" onClick={this.onAdd}></input>
+  <tr><td colSpan="2"><input type="button" className="btn btn-primary" value="Sign-up" onClick={this.onAdd}></input>
                       </td></tr>
                       
 </table>
@@ -167,7 +168,7 @@ export default class UserList extends Component {
         </form><br/>
       </div>
         <h4>
-User List
+Site Administrator List
 
         </h4>
         

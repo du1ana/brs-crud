@@ -3,8 +3,8 @@ import Welcome from "./Welcome";
 import './App.css';
 import Login from "./Login";
 import User from "./User";
-import JobList from "./Job";
 import Author from "./Author";
+import AccountSettings from "./AccountSettings";
 
 export default class Home extends Component {
   constructor() {
@@ -36,8 +36,8 @@ export default class Home extends Component {
         return <Login handleNavigation={this.handleNavigation}/>;
         case "user":
         return <User handleNavigation={this.handleNavigation}/>;
-        case "job":
-          return <JobList handleNavigation={this.handleNavigation}/>;
+        case "acc":
+          return <AccountSettings handleNavigation={this.handleNavigation}/>;
         case "author":
           return <Author handleNavigation={this.handleNavigation}/>;
       default:

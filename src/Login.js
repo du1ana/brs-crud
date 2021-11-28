@@ -26,8 +26,9 @@ export default class Login extends Component{
     } = this.state;
   return (
     <div className="Login AppHeader">
+      <hr/><br/><br/>
       <form>
-        <h2>User Log-in</h2>
+        <h3>Site Administrator Log-in</h3>
         <table className="table-secondary center">
           <tr>
               <td><label>Username </label></td>
