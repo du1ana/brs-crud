@@ -8,8 +8,8 @@ const AuthorRecord = (props) => {
     <tr>
       <td>{props.Author.name}</td>
       <td>{props.Author.genreSpec}</td>
-      <td>{props.Author.authorDesc}</td>
       <td>{props.Author.nationality}</td>
+      <td>{props.Author.authorDesc}</td>
       <td>{props.Author.books}</td>
       <td>
         <button
@@ -45,7 +45,6 @@ export default class AuthorList extends Component {
     this.onAdd = this.onAdd.bind(this);
 
     this.deleteAuthor = this.deleteAuthor.bind(this);
-    this.updateAuthor = this.updateAuthor.bind(this);
 
     this.refresh = this.refresh.bind(this);
 
@@ -67,17 +66,18 @@ export default class AuthorList extends Component {
     });
   }
 
-  onTextboxChangeNationality(event) {
-    this.setState({
-      nationality: event.target.value
-    });
-  }
   onTextboxChangeAuthorDesc(event) {
     this.setState({
       authorDesc: event.target.value
     });
   }
 
+  onTextboxChangeNationality(event) {
+    this.setState({
+      nationality: event.target.value
+    });
+  }
+  
   onTextboxChangeBooks(event) {
     this.setState({
       books: event.target.value
@@ -122,7 +122,7 @@ export default class AuthorList extends Component {
     console.log(this.state);
   }
 
-  async deleteAuthor(name) {
+  async deleteAuthor(author) {
     await axios
       .delete("http://localhost:5000/author/delete/", {
         data: { name: author }
