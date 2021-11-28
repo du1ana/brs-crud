@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# BRS
+Book Review System
+The Book Review System is a project undertaken by 184118B, 185016T, 185017X, 185030F, 185052A and 185066U for the course module IN 3400 Advance Database Management Systems. Please follow the following steps in setting up this project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Steps to run BRS
+1. Clone the repository 
+Run the following code in your command prompt to clone the repos
 
-## Available Scripts
+Back-End Repository
+```
+git clone https://github.com/Sharukap/BRS
+```
+Front-End Repository
+```
+git clone https://github.com/du1ana/brs-crud
+```
+Make sure that Node and Mongodb have been installed in your system in the correct manner
 
-In the project directory, you can run:
 
-### `npm start`
+2. Add the environment variables
+Create an `.env` to configure the environment variable. The relevant atlas URI can be found in the submitted report (Annexure 2: Readme File)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Configure NPM to run the server and client applications
+Prior to running the system, NPM must be configured in both the server and client application whereby you would run ; 
+```
+npm install
+```
+To install the required node packages for the operating of the system..
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once completed the server and client application can be initiated by running the command
+```
+npm run
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Once the above steps are taken, you can enter the landing page. To login enter username “user” and password as “user”
