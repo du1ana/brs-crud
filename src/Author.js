@@ -125,7 +125,7 @@ export default class AuthorList extends Component {
   async deleteAuthor(author) {
     await axios
       .delete("http://localhost:5000/author/delete/", {
-        data: { name: name }
+        data: { name: author }
       })
       .then((response) => {
         console.log(response.data);
