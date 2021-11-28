@@ -8,7 +8,7 @@ export default class Navbar extends Component {
       <div className="AppHeader">
         <button onClick={() => this.props.handleNavigation("user")}>View user list</button>
          <button onClick={() => this.props.handleNavigation("job")}>View job list</button>
-         
+         <button onClick={() => this.props.handleNavigation("author")}>View author list</button>
          <button onClick={() => this.props.handleNavigation("login")}>Log Out</button>
       </div>
     );
