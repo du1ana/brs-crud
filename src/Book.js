@@ -28,6 +28,7 @@ export default class BookList extends Component {
     this.onTextboxChangetitle = this.onTextboxChangetitle.bind(this);
     this.onTextboxChangeisbn = this.onTextboxChangeisbn.bind(this);
     this.onTextboxChangeavailability = this.onTextboxChangeavailability.bind(this);
+    this.onTextboxChangeAuthor =this.onTextboxChangeAuthor.bind(this);
     this.onAdd = this.onAdd.bind(this);
 
     this.deleteBook = this.deleteBook.bind(this);
@@ -55,6 +56,12 @@ export default class BookList extends Component {
       availability: event.target.value
     });
   }
+
+  onTextboxChangeAuthor(event) {
+    this.setState({
+      availability: event.target.value.author
+    });
+  }
   
   onAdd() {
   
@@ -78,7 +85,7 @@ export default class BookList extends Component {
 
   getList = async () => {
     let res = await axios.get("http://localhost:5000/book/list");
-    this.setState({ Booklist: res.data, updateFlag: false });
+    this.setState({ Booklist: res.data.data, updateFlag: false });
   };
 
   async componentDidUpdate() {
@@ -90,7 +97,9 @@ export default class BookList extends Component {
 
   async deleteBook(id) {
     await axios
-      .delete("http://localhost:5000/book/remove/"+id)
+      .delete("http://localhost:5000/book/remove/",{
+        data: { id: id }
+      })
       .then((response) => {
         console.log(response.data);
       });
@@ -102,6 +111,13 @@ export default class BookList extends Component {
   refresh() {
     this.setState({
       updateFlag: true,
+      title:"",
+      isbn:"",
+      author:"",
+      bookshelf:"",
+      language:"",
+      published:"",
+      availability:""
     });
   }
 
@@ -110,7 +126,7 @@ export default class BookList extends Component {
     return props.map((currentBook) => {
       return (
         <BookRecord
-          book={currentBook}
+          Book={currentBook}
           deleteBook={this.deleteBook}        
           key={currentBook.id}
         />
@@ -122,7 +138,7 @@ export default class BookList extends Component {
     const {
         title,
         isbn,
-        availability
+        availability,
       } = this.state;
 
     return (
@@ -158,7 +174,7 @@ export default class BookList extends Component {
         </form><br/>
       </div>
         <h4>
-Job List
+Book List
 
         </h4>
         
